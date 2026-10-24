@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Primary Meta Tags -->
+  <title>TakwimMatrik Pro | Sistem Pengurusan Takwim Sekolah & Kolej Pintar</title>
+  <meta name="title" content="TakwimMatrik Pro | Sistem Pengurusan Takwim Sekolah & Kolej Pintar">
+  <meta name="description" content="Penyelesaian takwim sekolah & kolej moden berasaskan Google Workspace. Import automatik Takwim KPM 2027 (Kumpulan A & B), integrasi Google Calendar, dan eksport Excel/PDF/DOCX tanpa kos pelayan.">
+  <meta name="keywords" content="takwim matrik, takwim sekolah 2027, google calendar takwim, pengurusan takwim kolej, jadual kpm 2027 kumpulan a b">
+  <meta name="author" content="TakwimMatrik Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TakwimMatrik Pro - Sistem Pengurusan Takwim Pintar">
+  <meta property="og:description" content="Selaraskan aktiviti sekolah dengan mudah. Import Takwim KPM 2027 secara automatik dan segerakkan ke Google Calendar rasmi.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#580B1C',
+              maroon: '#6B1124',
+              primary: '#BE123C',
+              hover: '#9F1239',
+              light: '#FFF1F2',
+              accent: '#E11D48'
+            },
+            navy: {
+              900: '#091326',
+              800: '#0F1D38',
+              700: '#172B52'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons (Local + CDN Fallback) -->
+  <script src="lucide.min.js"></script>
+  <script>
+    if (typeof lucide === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"><\/script>');
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- ======================================================================
+       NAVBAR (STICKY GLASSMORPHIC)
+       ====================================================================== -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/90 border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo & Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-700 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-rose-900/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="calendar" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-xl tracking-tight text-slate-900">TakwimMatrik</span>
+            <span class="px-2 py-0.5 text-[10px] font-extrabold tracking-wider uppercase bg-rose-100 text-rose-700 rounded-md border border-rose-200">PRO</span>
+          </div>
+          <p class="text-[11px] font-medium text-slate-500">Sistem Pengurusan Takwim Pintar v3.0</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#mockup" class="hover:text-rose-600 transition-colors flex items-center gap-1.5">
+          <i data-lucide="layout" class="w-4 h-4 text-slate-400"></i>
+          Paparan Sistem
+        </a>
+        <a href="#ciri" class="hover:text-rose-600 transition-colors">Ciri Utama</a>
+        <a href="#demo" class="hover:text-rose-600 transition-colors flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Demo Langsung
+        </a>
+        <a href="#perbandingan" class="hover:text-rose-600 transition-colors">Kelebihan</a>
+        <a href="#faq" class="hover:text-rose-600 transition-colors">Soalan Lazim</a>
+        <a href="#tempahan" class="hover:text-rose-600 transition-colors flex items-center gap-1 text-rose-600 font-bold">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+          Harga & Tempahan
+        </a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#demo" class="px-4 py-2.5 text-xs font-bold text-slate-700 hover:text-rose-600 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl transition-all shadow-sm flex items-center gap-1.5">
+          <i data-lucide="play-circle" class="w-4 h-4 text-rose-500"></i>
+          <span>Cuba Demo</span>
+        </a>
+        <a href="#tempahan" class="px-5 py-2.5 text-xs font-bold text-white bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 rounded-xl shadow-md shadow-rose-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2">
+          <i data-lucide="zap" class="w-3.5 h-3.5 fill-amber-300 text-amber-300"></i>
+          <span>Tempah RM50</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuToggle" class="lg:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Buka Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-white border-b border-slate-200 shadow-xl space-y-3">
+      <a href="#mockup" class="block py-2 text-sm font-semibold text-slate-700 hover:text-rose-600">Paparan Sistem (Mockup)</a>
+      <a href="#ciri" class="block py-2 text-sm font-semibold text-slate-700 hover:text-rose-600">Ciri Utama</a>
+      <a href="#demo" class="block py-2 text-sm font-semibold text-slate-700 hover:text-rose-600">Demo Langsung</a>
+      <a href="#perbandingan" class="block py-2 text-sm font-semibold text-slate-700 hover:text-rose-600">Kelebihan</a>
+      <a href="#tempahan" class="block py-2 text-sm font-bold text-rose-600 hover:text-rose-700">Harga & Borang Tempahan (Promo RM50)</a>
+      <a href="#faq" class="block py-2 text-sm font-semibold text-slate-700 hover:text-rose-600">Soalan Lazim</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="#tempahan" class="block w-full text-center py-3 text-xs font-bold text-white bg-gradient-to-r from-rose-600 to-rose-700 rounded-xl shadow-md">
+          Tempah Sekarang — Promo RM50 (One-Off)
+        </a>
+        <a href="#demo" class="block w-full text-center py-2.5 text-xs font-semibold text-slate-700 bg-slate-100 rounded-xl">
+          Cuba Demo Interaktif
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="relative pt-14 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-[#F8FAFC]">
+      <div class="hero-glow"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+        
+        <!-- Badges Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200/80 text-rose-700 text-xs font-bold mb-7 shadow-sm">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
+          </span>
+          <span>Sedia Untuk Sesi Persekolahan KPM 2027</span>
+          <span class="text-rose-300">|</span>
+          <span class="text-slate-600 font-semibold">Kumpulan A & B</span>
+          <span class="text-rose-300">|</span>
+          <span class="text-rose-700 font-extrabold bg-rose-100 px-2 py-0.5 rounded-md">Promo RM50</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto">
+          Penyelarasan Takwim Sekolah Kini <span class="gradient-text">Lebih Pantas, Tersusun & Pintar</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mt-6 text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+          Tinggalkan dokumen jadual bertindih dan pembetulan saat akhir. Selaras aktiviti Unit Kurikulum, HEM, dan Kokurikulum terus ke <strong>Google Calendar Rasmi</strong> dengan sifar kos pelayan.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#tempahan" class="w-full sm:w-auto px-8 py-4 text-sm font-bold text-white bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 rounded-2xl shadow-xl shadow-rose-600/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
+            <i data-lucide="zap" class="w-5 h-5 text-amber-300 fill-amber-300 group-hover:scale-110 transition-transform"></i>
+            <span>Tempah Sekarang — Promo RM50 (One-Off)</span>
+          </a>
+          <a href="#demo" class="w-full sm:w-auto px-7 py-4 text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200/90 rounded-2xl shadow-sm transition-all flex items-center justify-center gap-2">
+            <i data-lucide="play-circle" class="w-5 h-5 text-rose-600"></i>
+            <span>Cuba Demo Interaktif</span>
+          </a>
+        </div>
+
+        <!-- Trust Metric Badges -->
+        <div class="mt-12 pt-8 border-t border-slate-200/70 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div class="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 shadow-sm">
+            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</p>
+            <p class="text-xs text-slate-500 font-medium mt-1">Google Sheets Native</p>
+          </div>
+          <div class="bg-rose-50/70 backdrop-blur-sm p-4 rounded-2xl border border-rose-100 shadow-sm">
+            <p class="text-2xl sm:text-3xl font-extrabold text-rose-600">RM 50</p>
+            <p class="text-xs text-rose-700 font-semibold mt-1">Promo One-Off (Asal RM100)</p>
+          </div>
+          <div class="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 shadow-sm">
+            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">1-Klik</p>
+            <p class="text-xs text-slate-500 font-medium mt-1">Sync Google Calendar</p>
+          </div>
+          <div class="bg-white/60 backdrop-blur-sm p-4 rounded-2xl border border-slate-100 shadow-sm">
+            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">44 Minggu</p>
+            <p class="text-xs text-slate-500 font-medium mt-1">Takwim KPM 2027 Sedia Ada</p>
+          </div>
+        </div>
+
+        <!-- ======================================================================
+             HERO MOCKUP SHOWCASE (LAPTOP & OVERLAPPING MOBILE)
+             ====================================================================== -->
+        <div class="mt-16 max-w-5xl mx-auto relative text-left">
+          
+          <!-- Background Glow Effect Behind Laptop -->
+          <div class="absolute -inset-4 bg-gradient-to-r from-rose-500/20 via-rose-600/10 to-indigo-500/20 rounded-3xl blur-2xl opacity-70 pointer-events-none"></div>
+
+          <!-- Desktop Laptop Mockup Frame -->
+          <div class="mockup-desktop-frame">
+            <!-- Browser Header Bar -->
+            <div class="mockup-header-bar">
+              <div class="mockup-dots">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+              </div>
+              <div class="mockup-address-bar">
+                <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span class="truncate">https://takwim.sekolah.edu.my/app — SMK Seri Damai PRO</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-slate-400 hidden sm:flex">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-[11px] font-medium text-slate-300">Live v3.0</span>
+              </div>
+            </div>
+
+            <!-- Laptop Screen Display -->
+            <div class="relative bg-slate-900 overflow-hidden">
+              <img src="assets/mockup-dashboard.png" 
+                   alt="Mockup Paparan Ringkasan Takwim & Kalendar Penuh" 
+                   class="w-full h-auto object-cover block shadow-inner hover:scale-[1.01] transition-transform duration-500"
+                   loading="eager">
+              
+              <!-- Subtle Inner Gloss Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/5 pointer-events-none"></div>
+            </div>
+          </div>
+
+          <!-- Overlapping Floating Mobile Smartphone Mockup (Desktop / Tablet View) -->
+          <div class="hidden sm:block absolute -bottom-8 -right-4 lg:-right-8 w-56 lg:w-64 animate-float z-20">
+            <div class="mockup-phone-frame">
+              <div class="mockup-phone-notch"></div>
+              <div class="mockup-phone-screen">
+                <img src="assets/mockup-mobile.png" 
+                     alt="Mockup Paparan Mobile Telefon Pintar TakwimMatrik" 
+                     class="w-full h-auto object-cover block"
+                     loading="eager">
+              </div>
+            </div>
+            
+            <!-- Mobile Badge Floating Pill -->
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-slate-900/90 backdrop-blur-md text-white text-[10px] font-bold py-1 px-3 rounded-full border border-slate-700 shadow-lg flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>📱 Mesra Telefon Pintar</span>
+            </div>
+          </div>
+
+          <!-- Left Floating Feature Pill -->
+          <div class="hidden md:flex items-center gap-2 absolute top-12 -left-6 bg-white/95 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-slate-200/90 shadow-xl shadow-slate-900/10 z-20">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <i data-lucide="calendar-check-2" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <p class="text-xs font-extrabold text-slate-800">Auto-Sync Google Calendar</p>
+              <p class="text-[10px] text-slate-500">Kemaskini serta-merta pada telefon guru</p>
+            </div>
+          </div>
+
+          <!-- Bottom Left Floating Pill -->
+          <div class="hidden md:flex items-center gap-2 absolute -bottom-5 left-10 bg-white/95 backdrop-blur-md py-2 px-3.5 rounded-xl border border-slate-200/90 shadow-lg z-20">
+            <span class="w-2 h-2 rounded-full bg-rose-600"></span>
+            <span class="text-xs font-bold text-slate-700">44 Minggu Sesi 2027 KPM Lengkap</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SYSTEM MOCKUPS SHOWCASE SECTION (TABBED INTERACTIVE)
+         ====================================================================== -->
+    <section id="mockup" class="py-20 md:py-28 bg-[#F8FAFC] border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 text-rose-700 text-xs font-bold mb-3 border border-rose-200">
+            <i data-lucide="layout" class="w-3.5 h-3.5"></i>
+            <span>Antaramuka Generasi Baharu</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Paparan Sistem Sebenar TakwimMatrik Pro
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            Diteliti setiap sudut untuk memudahkan semakan takwim guru, pentadbir, dan penyelaras unit. Sila klik tab di bawah untuk melihat modul paparan.
+          </p>
+
+          <!-- Tab Selection Buttons -->
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <button class="mockup-tab-btn active px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold border border-rose-600 bg-rose-600 text-white flex items-center gap-2 shadow-sm" data-mockup-target="panel-dashboard">
+              <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              <span>1. Dashboard & Kalendar Penuh</span>
+            </button>
+            <button class="mockup-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold border border-slate-200 bg-white text-slate-700 hover:border-slate-300 flex items-center gap-2 shadow-sm" data-mockup-target="panel-matriks">
+              <i data-lucide="table" class="w-4 h-4"></i>
+              <span>2. Matriks Jadual Silang Unit</span>
+            </button>
+            <button class="mockup-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold border border-slate-200 bg-white text-slate-700 hover:border-slate-300 flex items-center gap-2 shadow-sm" data-mockup-target="panel-mobile">
+              <i data-lucide="smartphone" class="w-4 h-4"></i>
+              <span>3. Paparan Mobile Telefon Pintar</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Panel 1: Dashboard & Kalendar Penuh -->
+        <div id="panel-dashboard" class="mockup-panel">
+          <div class="max-w-5xl mx-auto">
+            <div class="mockup-desktop-frame shadow-2xl">
+              <div class="mockup-header-bar">
+                <div class="mockup-dots">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                </div>
+                <div class="mockup-address-bar">
+                  <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>https://takwim.sekolah.edu.my/dashboard — Ringkasan & Kalendar Interaktif</span>
+                </div>
+                <span class="text-[11px] font-semibold text-slate-400 hidden sm:inline">Papan Pemuka Utama</span>
+              </div>
+              <div class="relative bg-slate-900">
+                <img src="assets/mockup-dashboard.png" alt="Mockup Dashboard & Kalendar Penuh" class="w-full h-auto block" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Features Breakdown for Tab 1 -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="activity" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Kad Metrik KPI Acara</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Pantau jumlah acara aktif, program minggu ini, dan baki program secara automatik.</p>
+                </div>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Kalendar Grid Interaktif</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Navigasi bulan, minggu, dan hari. Klik mana-mana acara untuk butiran lengkap.</p>
+                </div>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="filter" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Penapis Unit Pantas</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Tapis acara mengikut unit pentadbiran, kurikulum, HEM, atau kokurikulum serta-merta.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Panel 2: Matriks Jadual Mengikut Unit -->
+        <div id="panel-matriks" class="mockup-panel hidden">
+          <div class="max-w-5xl mx-auto">
+            <div class="mockup-desktop-frame shadow-2xl">
+              <div class="mockup-header-bar">
+                <div class="mockup-dots">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                </div>
+                <div class="mockup-address-bar">
+                  <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  <span>https://takwim.sekolah.edu.my/matriks — Jadual Silang Mengikut Unit</span>
+                </div>
+                <span class="text-[11px] font-semibold text-slate-400 hidden sm:inline">Mod Matriks</span>
+              </div>
+              <div class="relative bg-slate-900">
+                <img src="assets/mockup-matriks.png" alt="Mockup Matriks Jadual Mengikut Unit" class="w-full h-auto block" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Features Breakdown for Tab 2 -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="columns-3" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Semakan Silang Pertindihan</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Lihat lajur Pengurusan, Kurikulum, HEM, Kokurikulum, PPKI & KPM dalam satu paparan mendatar.</p>
+                </div>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Eksport Dokumen Word (.docx)</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Jana buku takwim sekolah dalam format Word dengan 1 klik sedia untuk dicetak dan diedar.</p>
+                </div>
+              </div>
+              <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-slate-900">Tambah Acara Pantas</h4>
+                  <p class="text-[11px] text-slate-500 mt-0.5">Pentadbir hanya perlu klik mana-mana kotak tarikh untuk mendaftar aktiviti baharu.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Panel 3: Paparan Mobile Pintar -->
+        <div id="panel-mobile" class="mockup-panel hidden">
+          <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10">
+            <!-- Centered Smartphone Mockup -->
+            <div class="w-72 flex-shrink-0">
+              <div class="mockup-phone-frame mx-auto shadow-2xl">
+                <div class="mockup-phone-notch"></div>
+                <div class="mockup-phone-screen">
+                  <img src="assets/mockup-mobile.png" alt="Mockup Aplikasi Mobile TakwimMatrik" class="w-full h-auto block" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Features Description for Mobile -->
+            <div class="max-w-md space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200">
+                <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                <span>Kemudahan Di Poket Guru</span>
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900">
+                Akses Pantas Bila-Bila Masa Di Mana Jua
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Guru yang bertugas atau berada di perhimpunan sekolah boleh menyemak jadual hari ini dengan pantas terus dari telefon pintar masing-masing tanpa memerlukan aplikasi pihak ketiga yang berat.
+              </p>
+              
+              <div class="space-y-3 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                  <p class="text-xs text-slate-700"><strong>Bar Navigasi Bawah</strong> — Tukar antara Matriks, Dashboard, dan Senarai Acara secara lancar.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                  <p class="text-xs text-slate-700"><strong>Sentuhan Mesra Jari</strong> — Kad acara besar dengan petunjuk warna unit yang terang dan jelas.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                  <p class="text-xs text-slate-700"><strong>Sifar Muat Turun App Store</strong> — Berfungsi sebagai Web App moden melalui pautan rasmi sekolah.</p>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <a href="#tempahan" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 shadow-md transition-all">
+                  <i data-lucide="zap" class="w-4 h-4 fill-amber-300 text-amber-300"></i>
+                  <span>Tempah TakwimMatrik Pro (RM50)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INTERACTIVE DEMO SANDBOX (THE WOW FACTOR)
+         ====================================================================== -->
+    <section id="demo" class="py-16 md:py-24 bg-white border-y border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold mb-3 border border-emerald-200">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+            <span>Simulasi Langsung</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Uji Paparan Takwim Interaktif
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            Cuba tapis kategori unit atau taip kata kunci di bawah untuk merasai kepantasan navigasi takwim.
+          </p>
+        </div>
+
+        <!-- Sandbox Box Card -->
+        <div class="bg-slate-50/80 rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xl">
+          
+          <!-- Filter Bar & Search -->
+          <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
+            
+            <!-- Unit Filter Chips -->
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <button class="demo-filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="Semua">
+                Semua Unit
+              </button>
+              <button class="demo-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="Pentadbiran">
+                Pentadbiran
+              </button>
+              <button class="demo-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="Kurikulum">
+                Kurikulum
+              </button>
+              <button class="demo-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="HEM">
+                HEM
+              </button>
+              <button class="demo-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="Kokurikulum">
+                Kokurikulum
+              </button>
+              <button class="demo-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700" data-unit="Takwim KPM">
+                Takwim KPM
+              </button>
+            </div>
+
+            <!-- Search Field -->
+            <div class="relative w-full md:w-64">
+              <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input type="text" id="demoSearchInput" placeholder="Cari acara, PIC, tempat..." 
+                     class="w-full pl-9 pr-3.5 py-2 text-xs bg-white border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500 transition shadow-sm">
+            </div>
+
+          </div>
+
+          <!-- Counter Header -->
+          <div class="flex items-center justify-between pt-4 pb-3">
+            <span id="demoEventCount" class="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              Memuatkan data...
+            </span>
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Segerak Automatik</span>
+            </div>
+          </div>
+
+          <!-- Event Cards List (Dynamically Rendered by app.js) -->
+          <div id="demoEventsContainer" class="space-y-3 mt-1">
+            <!-- Dynamic Injection -->
+          </div>
+
+          <!-- Hint Footer -->
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+              <span>Data dilindungi mod pentadbir selamat dengan PIN/kata laluan.</span>
+            </div>
+            <span class="font-medium text-slate-400">*Ini adalah simulasi interaktif</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CORE FEATURES BENTO GRID
+         ====================================================================== -->
+    <section id="ciri" class="py-20 md:py-28 bg-[#F8FAFC]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rose-600">Keupayaan Sistem</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Direka Khas Menjawab Keperluan Pengurusan Takwim Sekolah
+          </h2>
+          <p class="text-base text-slate-600 mt-4">
+            Gabungan kesederhanaan Google Sheets dengan kuasa automasi Google Calendar dan reka bentuk papan pemuka yang anggun.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
+                <i data-lucide="calendar-check-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Sync Google Calendar Bersama</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Segerakkan semua aktiviti sekolah terus ke satu ID Kalendar Rasmi maktab/sekolah. Acara akan serta-merta muncul pada telefon pintar guru dan staf yang melanggan kalendar tersebut.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-blue-600 gap-1">
+              <span>Auto-kemas kini & auto-padam</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-6">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Import Takwim KPM 2027</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Sokongan penuh Kumpulan A (Johor, Kedah, Kelantan, Terengganu) dan Kumpulan B. Penomboran Minggu 1 hingga 44 serta Cuti Penggal dijana secara automatik dengan 1 klik.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-rose-600 gap-1">
+              <span>Selaras surat siaran rasmi KPM</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Eksport Serbaguna (3 Format)</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Perlu cetak atau lampirkan dalam mesyuarat? Eksport data takwim bila-bila masa ke fail Microsoft Excel (.xlsx), dokumen Word (.docx), atau PDF sedia cetak.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-emerald-600 gap-1">
+              <span>Excel, Word & PDF Cetak</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Kawalan Akses Mod Pentadbir</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Warga sekolah boleh melihat takwim secara bebas, namun butang sunting, tambah, dan padam hanya boleh diakses menggunakan kata laluan pentadbir yang boleh diubah suai.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-amber-600 gap-1">
+              <span>Dilengkapi Soft-Delete selamat</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6">
+                <i data-lucide="smartphone" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">100% Responsif & Mudah Alih</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Papan pemuka dioptimumkan untuk kelihatan anggun pada paparan skrin telefon pintar ketika guru bertugas, tablet di dalam mesyuarat, dan paparan monitor komputer pejabat.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-purple-600 gap-1">
+              <span>Paparan Kalendar & Senarai</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-700 flex items-center justify-center mb-6">
+                <i data-lucide="cloud-off" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">Sifar Kos Pelayan & Penyelenggaraan</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Beroperasi sepenuhnya atas infrastruktur Google percuma (Google Apps Script & Google Sheets). Tiada bayaran pelayan bulanan, tiada risiko pangkalan data luar terpadam.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-bold text-slate-700 gap-1">
+              <span>Penyimpanan Google Drive Selamat</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         COMPARISON TABLE: TRADISIONAL VS TAKWIMMATRIK PRO
+         ====================================================================== -->
+    <section id="perbandingan" class="py-20 bg-white border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rose-600">Bandingan Nyata</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Mengapa Perlu Beralih ke TakwimMatrik Pro?
+          </h2>
+          <p class="text-slate-600 text-sm mt-3">
+            Lihat perbezaan ketara antara cara penyelarasan lama dan automasi pintar.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto rounded-3xl border border-slate-200 shadow-sm">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase tracking-wider font-extrabold">
+              <tr>
+                <th class="py-4 px-6">Perkara</th>
+                <th class="py-4 px-6 text-slate-400">Kaedah Lama (Word / Kertas)</th>
+                <th class="py-4 px-6 text-rose-600 bg-rose-50/50">TakwimMatrik Pro</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="py-4 px-6 font-bold text-slate-800">Kemas Kini Tarikh Acara</td>
+                <td class="py-4 px-6 text-slate-500">Perlu cetak semula dan edar fail Word versi baharu (v1, v2_final).</td>
+                <td class="py-4 px-6 text-slate-900 bg-rose-50/20 font-medium">Kemas kini masa nyata (*real-time*). Pautan kekal sama.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-bold text-slate-800">Pertindihan Tarikh Program</td>
+                <td class="py-4 px-6 text-slate-500">Sering bertindih antara unit kerana tiada visual pusat sehenti.</td>
+                <td class="py-4 px-6 text-slate-900 bg-rose-50/20 font-medium">Paparan kalendar bersepadu mengelakkan konflik tarikh.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-bold text-slate-800">Penyelarasan Kalendar Guru</td>
+                <td class="py-4 px-6 text-slate-500">Guru terpaksa taip sendiri satu per satu ke dalam kalendar telefon.</td>
+                <td class="py-4 px-6 text-slate-900 bg-rose-50/20 font-medium">1-Klik segerak terus ke Google Calendar rasmi.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-bold text-slate-800">Takwim Cuti KPM</td>
+                <td class="py-4 px-6 text-slate-500">Semak PDF edaran kementerian dan salin secara manual.</td>
+                <td class="py-4 px-6 text-slate-900 bg-rose-50/20 font-medium">Modul Takwim KPM 2027 sedia diimport serta-merta.</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-bold text-slate-800">Kos Pengoperasian</td>
+                <td class="py-4 px-6 text-slate-500">Kos kertas cetakan takwim tebal setiap awal tahun.</td>
+                <td class="py-4 px-6 text-emerald-700 bg-emerald-50/30 font-bold">RM 0 (Percuma menggunakan Google Workspace).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HOW IT WORKS (3 SIMPLE STEPS)
+         ====================================================================== -->
+    <section id="langkah" class="py-20 md:py-28 bg-[#F8FAFC]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rose-600">Pelaksanaan Pantas</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Hanya 3 Langkah Mudah Untuk Bermula
+          </h2>
+          <p class="text-slate-600 text-sm mt-3">
+            Seni bina *Zero-Maintenance Shared Library* membolehkan sekolah anda mula menggunakan sistem dalam beberapa minit.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 relative shadow-sm">
+            <span class="w-10 h-10 rounded-2xl bg-rose-600 text-white font-extrabold flex items-center justify-center text-sm mb-6 shadow-md shadow-rose-600/30">1</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Cipta Spreadsheet & Sambung Library</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Cipta satu Google Spreadsheet baharu dan pasangkan kod ringkas penghala ke TakwimMatrik Core Library.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 relative shadow-sm">
+            <span class="w-10 h-10 rounded-2xl bg-slate-900 text-white font-extrabold flex items-center justify-center text-sm mb-6 shadow-md shadow-slate-900/30">2</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Aktifkan & Import Takwim KPM</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Buka Web App, sahkan kod sekolah, dan gunakan butang import untuk memasukkan kalendar akademik rasmi KPM 2027.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 relative shadow-sm">
+            <span class="w-10 h-10 rounded-2xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-sm mb-6 shadow-md shadow-emerald-600/30">3</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Kongsi Pautan & Kalendar Bersama</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Edarkan pautan Web App kepada penyelaras unit dan langgan kalendar kongsi ke telefon masing-masing. Selesai!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PRICING & BOOKING FORM SECTION (BORANG TEMPAHAN)
+         ====================================================================== -->
+    <section id="tempahan" class="py-20 md:py-28 bg-gradient-to-b from-[#F8FAFC] via-white to-slate-50 border-t border-slate-200 relative overflow-hidden">
+      <!-- Glow ambient background -->
+      <div class="pricing-glow"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold mb-4 shadow-sm">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
+            </span>
+            <span>Tawaran Pelancaran Sesi Persekolahan 2027</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Pakej Lengkap & Borang Tempahan
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed">
+            Dapatkan sistem pengurusan takwim pintar ini pada harga promosi istimewa. <strong>Bayaran sekali sahaja (one-off)</strong> — tiada yuran bulanan, tiada caj tersembunyi.
+          </p>
+        </div>
+
+        <!-- Pricing Card & Order Workflow Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-6xl mx-auto">
+          
+          <!-- Column 1: Pricing & Package Value (5 Cols) -->
+          <div class="lg:col-span-5 bg-white rounded-3xl p-8 border-2 border-rose-500 shadow-2xl relative flex flex-col justify-between overflow-hidden">
+            <!-- Top Promo Ribbon -->
+            <div class="absolute top-0 right-0 promo-badge-ribbon text-white text-[10px] font-extrabold uppercase tracking-wider py-1.5 px-6 rounded-bl-2xl">
+              🔥 DISKAUN 50%
+            </div>
+
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-600">Lesen Penuh Seumur Hidup</span>
+              <h3 class="text-2xl font-extrabold text-slate-900 mt-1">TakwimMatrik Pro v3.0</h3>
+              <p class="text-xs text-slate-500 mt-1">Sesuai untuk Sekolah Menengah, SK, SJKC, Kolej & Institusi Pendidikan.</p>
+
+              <!-- Price Tag -->
+              <div class="my-6 p-5 rounded-2xl bg-gradient-to-br from-rose-50 via-slate-50 to-white border border-rose-100">
+                <div class="flex items-baseline gap-3">
+                  <span class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">RM 50</span>
+                  <div class="flex flex-col">
+                    <span class="text-sm font-semibold text-slate-400 line-through">RM 100</span>
+                    <span class="text-[11px] font-bold text-rose-600 uppercase">Jimat RM50</span>
+                  </div>
+                </div>
+                <div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-bold">
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+                  <span>Bayaran One-Off (Tiada Komitmen Bulanan)</span>
+                </div>
+              </div>
+
+              <!-- Value Checklist -->
+              <div class="space-y-3 text-xs text-slate-700">
+                <p class="font-bold text-slate-900 uppercase text-[11px] tracking-wider mb-2">Semua Yang Anda Terima:</p>
+                
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Salinan Penuh Sistem</strong> (Google Sheets & Web App Apps Script)</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Akses Shared Core Library</strong> — Kemas kini fungsi baharu tanpa usik kod sekolah</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Data Takwim KPM 2027</strong> (Kumpulan A & B, Minggu 1–44, Cuti Penggal & Kelepasan Am)</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Integrasi Google Calendar Rasmi</strong> tanpa had bilangan acara & staf</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Eksport 3 Format</strong> (Microsoft Excel, Word .docx, PDF Cetak)</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Keselamatan Mod Pentadbir PIN</strong> & perlindungan data soft-delete</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Panduan Setup Lengkap</strong> bergambar langkah-demi-langkah</span>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <div class="w-4 h-4 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+                  </div>
+                  <span><strong>Sokongan Bantuan Teknikal</strong> terus dari pembangun</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Note -->
+            <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i> Lesen Rasmi Sekolah</span>
+              <span class="font-bold text-rose-600">Stok Kod Promo Terhad</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Booking Form Instructions & Action Hub (7 Cols) -->
+          <div class="lg:col-span-7 bg-white rounded-3xl p-8 border border-slate-200 shadow-xl flex flex-col justify-between">
+            
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-10 h-10 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
+                    <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-slate-900">Borang Tempahan Rasmi</h3>
+                    <p class="text-xs text-slate-500">Isi maklumat tempahan melalui Google Forms selamat</p>
+                  </div>
+                </div>
+                <span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-[11px] font-bold border border-emerald-200">
+                  ⚡ Proses Pantas
+                </span>
+              </div>
+
+              <!-- 3 Easy Ordering Steps -->
+              <div class="mt-6 space-y-4">
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
+                  <span class="w-8 h-8 rounded-xl bg-slate-900 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0">1</span>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-900">Isi Maklumat Sekolah & Emel</h4>
+                    <p class="text-xs text-slate-600 mt-0.5">Buka pautan borang tempahan Google Form dan masukkan nama sekolah, nama penyelaras, dan emel Google Workspace penerima.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
+                  <span class="w-8 h-8 rounded-xl bg-rose-600 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0">2</span>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-900">Lakukan Pembayaran Promo RM50</h4>
+                    <p class="text-xs text-slate-600 mt-0.5">Pindahkan bayaran promo RM50 (harga asal RM100) dan muat naik slip resit transaksi ke dalam borang sebagai pengesahan pantas.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
+                  <span class="w-8 h-8 rounded-xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs flex-shrink-0">3</span>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-900">Terima Pautan Sistem & Panduan Setup</h4>
+                    <p class="text-xs text-slate-600 mt-0.5">Pautan salinan sistem (*Make a copy*), pengesahan akses Core Library, dan tutorial setup lengkap akan dihantar terus ke peti emel anda!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Primary Action Buttons -->
+              <div class="mt-8 space-y-3">
+                <!-- Direct Google Form Button -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSepLbBacyleUEVbRZ2MFYzB_brLCGxtOITa_I8l2FYKXAw59w/viewform?usp=header" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="w-full py-4 px-6 text-sm sm:text-base font-extrabold text-white bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 rounded-2xl shadow-xl shadow-rose-600/30 transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3 group">
+                  <i data-lucide="external-link" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                  <span>Buka Borang Tempahan (Google Forms)</span>
+                  <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Embedded Toggle Button -->
+                <button id="toggleEmbedFormBtn" type="button" 
+                        class="w-full py-3 px-5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-slate-500"></i>
+                  <span>Atau Buka & Isi Borang Terus Di Halaman</span>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Trust Guarantees -->
+            <div class="mt-8 pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div class="flex items-center justify-center gap-2 text-xs text-slate-600">
+                <i data-lucide="lock" class="w-4 h-4 text-emerald-600"></i>
+                <span>Google Form Selamat</span>
+              </div>
+              <div class="flex items-center justify-center gap-2 text-xs text-slate-600">
+                <i data-lucide="receipt" class="w-4 h-4 text-blue-600"></i>
+                <span>Resit / Invois Sekolah</span>
+              </div>
+              <div class="flex items-center justify-center gap-2 text-xs text-slate-600">
+                <i data-lucide="headphones" class="w-4 h-4 text-rose-600"></i>
+                <span>Bantuan Khidmat Guru</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ======================================================================
+             EMBEDDED GOOGLE FORM CONTAINER (COLLAPSIBLE / TOGGLEABLE)
+             ====================================================================== -->
+        <div id="embeddedOrderFormWrapper" class="mt-12 hidden">
+          <div class="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xl">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-200">
+              <div class="flex items-center gap-2">
+                <i data-lucide="form-input" class="w-5 h-5 text-rose-600"></i>
+                <h3 class="text-base font-bold text-slate-900">Borang Tempahan Google Form Bersepadu</h3>
+              </div>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSepLbBacyleUEVbRZ2MFYzB_brLCGxtOITa_I8l2FYKXAw59w/viewform?usp=header" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="text-xs font-semibold text-rose-600 hover:underline flex items-center gap-1">
+                <span>Buka di tab penuh</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+
+            <div class="w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 min-h-[700px] relative">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepLbBacyleUEVbRZ2MFYzB_brLCGxtOITa_I8l2FYKXAw59w/viewform?embedded=true" 
+                      width="100%" 
+                      height="850" 
+                      frameborder="0" 
+                      marginheight="0" 
+                      marginwidth="0" 
+                      class="w-full h-[850px] block"
+                      title="Borang Tempahan TakwimMatrik Pro">
+                Memuatkan borang tempahan...
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+         ====================================================================== -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-rose-600">Bantuan & Maklumat</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Soalan Lazim (FAQ)
+          </h2>
+          <p class="text-slate-600 text-sm mt-3">
+            Ketahui lebih lanjut mengenai aspek teknikal dan keselamatan sistem.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Berapakah harga TakwimMatrik Pro dan adakah bayaran ini perlu dibayar setiap tahun?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Harga asal sistem ini ialah <strong>RM 100</strong>, namun sempena pelancaran sesi persekolahan 2027 kami menawarkan harga promosi istimewa <strong>RM 50 (One-Off / Bayaran Sekali Sahaja)</strong>. Anda mendapat lesen penuh seumur hidup tanpa sebarang yuran bulanan atau caj tahunan berulang.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Bagaimanakah proses pengesahan tempahan dan penghantaran fail sistem?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Anda hanya perlu melengkapkan borang tempahan Google Form rasmi dengan butiran nama sekolah, emel Google Workspace penerima, serta muat naik bukti resit bayaran RM50. Selepas disahkan, pautan salinan template sistem (*Make a copy*), akses Core Library, dan panduan pemasangan video/PDF akan dihantar terus ke emel anda dalam masa singkat.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Bolehkah pihak sekolah mendapatkan invois dan resit rasmi untuk tuntutan bayaran?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Ya, pasti! Invois dan resit rasmi disediakan bagi membolehkan pihak sekolah, penyelaras, atau PIBG membuat tuntutan bayaran rasmi (PCG / PIBG). Sila tandakan pilihan invois/resit semasa mengisi borang tempahan.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Adakah sistem ini memerlukan sebarang bayaran pelayan atau langganan hosting?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Tidak sama sekali! Sistem TakwimMatrik Pro berjalan 100% di atas infrastruktur Google Apps Script dan Google Sheets secara percuma (serverless). Anda tidak memerlukan bayaran sewaan pelayan (*server hosting*) bulanan.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Bagaimanakah integrasi Google Calendar berfungsi?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Anda boleh memasukkan ID Kalendar Google organisasi/sekolah di menu Tetapan Admin. Setiap kali acara ditambah, disunting, atau dipadam dalam sistem, perubahan tersebut akan disegerakkan terus ke dalam Google Calendar rasmi berkenaan.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Adakah data takwim sekolah kami selamat dan tidak bercampur dengan sekolah lain?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Sangat selamat. Sistem ini menggunakan seni bina multi-tenant dengan pengasingan data (*data isolation*). Data acara disimpan di Google Sheets sekolah anda sendiri di Google Drive akaun anda, bukan di pangkalan data luar.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <button class="faq-header w-full p-5 text-left font-bold text-sm text-slate-800 flex items-center justify-between hover:text-rose-600 transition-colors">
+              <span>Bolehkah pengguna biasa (guru/pelajar) mengubah suai atau memadam acara?</span>
+              <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5 pb-5 text-xs text-slate-600 leading-relaxed">
+              Tidak boleh. Mod paparan umum adalah *read-only*. Butang sunting dan padam hanya muncul dan boleh diakses apabila pentadbir memasukkan kata laluan mod pentadbir (Admin Passcode).
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FINAL CALL TO ACTION BANNER
+         ====================================================================== -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <div class="hero-glow opacity-30"></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+        
+        <!-- Promo Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-bold mb-6">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i>
+          <span>Tawaran Khas: RM50 (Harga Asal RM100) — Bayaran One-Off</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          Sedia Merevolusikan Pengurusan Takwim Sekolah Anda?
+        </h2>
+        <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Tinggalkan kaedah jadual lama yang bersepah dan bertindih. Sertai puluhan sekolah yang kini menguruskan takwim secara pantas, bersistematik, dan profesional.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#tempahan" class="w-full sm:w-auto px-8 py-4 text-sm font-bold text-white bg-gradient-to-r from-rose-600 via-rose-700 to-rose-600 hover:from-rose-700 hover:to-rose-800 rounded-2xl shadow-xl shadow-rose-600/40 transition-transform transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 fill-amber-300 text-amber-300"></i>
+            <span>Tempah Sekarang — Promo RM50</span>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSepLbBacyleUEVbRZ2MFYzB_brLCGxtOITa_I8l2FYKXAw59w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 text-sm font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-2xl transition flex items-center justify-center gap-2">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            <span>Buka Google Form Tempahan</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-rose-600 flex items-center justify-center text-white">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">TakwimMatrik Pro</span>
+          <p class="text-[11px] text-slate-500">Google Workspace Education Solutions</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-slate-400 flex-wrap justify-center">
+        <a href="#mockup" class="hover:text-white transition-colors">Paparan Sistem</a>
+        <a href="#ciri" class="hover:text-white transition-colors">Ciri Utama</a>
+        <a href="#demo" class="hover:text-white transition-colors">Demo</a>
+        <a href="#tempahan" class="text-rose-400 font-bold hover:text-rose-300 transition-colors">Borang Tempahan (RM50)</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </div>
+
+      <div class="text-slate-500 text-center sm:text-right">
+        <p>&copy; 2026-2027 TakwimMatrik Pro. Hak Cipta Terpelihara.</p>
+        <p class="text-[10px] mt-0.5">Dikuasakan oleh Google Apps Script & FullCalendar.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       FLOATING STICKY PROMO BAR (BOTTOM)
+       ====================================================================== -->
+  <div id="stickyPromoBar" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 md:max-w-md z-50 transform translate-y-32 opacity-0 transition-all duration-500 ease-out">
+    <div class="bg-slate-900/95 backdrop-blur-md text-white p-4 rounded-2xl border border-slate-700/80 shadow-2xl flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-rose-500 flex items-center justify-center flex-shrink-0 text-white shadow-md">
+          <i data-lucide="zap" class="w-5 h-5 fill-amber-300 text-amber-300"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-rose-300 uppercase tracking-wide">Promo Sesi 2027</span>
+            <span class="text-[10px] bg-rose-600 text-white font-extrabold px-1.5 py-0.5 rounded">RM 50</span>
+          </div>
+          <p class="text-[11px] text-slate-300 mt-0.5">Asal <span class="line-through text-slate-500">RM100</span> • One-Off Bayaran Sekali</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#tempahan" class="px-4 py-2 text-xs font-bold text-white bg-rose-600 hover:bg-rose-500 rounded-xl shadow-md transition-all whitespace-nowrap">
+          Tempah
+        </a>
+        <button id="closeStickyPromoBtn" class="p-1.5 text-slate-400 hover:text-white transition-colors" aria-label="Tutup Banner">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
